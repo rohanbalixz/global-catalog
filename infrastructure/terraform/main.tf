@@ -14,6 +14,7 @@ provider "aws" {
 resource "aws_dynamodb_table" "catalog" {
   name         = var.table_name
   billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "ItemID"
 
   attribute {
     name = "ItemID"
