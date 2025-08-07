@@ -20,6 +20,11 @@ resource "aws_dynamodb_table" "catalog" {
     type = "S"
   }
 
+  attribute {
+    name = "Category"
+    type = "S"
+  }
+
   global_secondary_index {
     name            = "ByCategory"
     hash_key        = "Category"
